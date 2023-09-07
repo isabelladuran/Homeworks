@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export const GifExpert = () => {
+export const GifExpertApp = () => {
   const [categories, setCategory] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
-  const add = () => {
+  const onAdd = () => {
     setCategory([...categories, inputValue]);
     setInputValue("");
   };
@@ -19,7 +19,7 @@ export const GifExpert = () => {
           setInputValue(e.target.value);
         }}
       ></input>
-        <button onClick = { () => add() }> Agregar </button>
+        <button onClick = { () => onAdd() }> Agregar </button>
       <ol>
         {categories.map((category, key) => {
           return <li key={key}>{category}</li>;
