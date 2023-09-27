@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const AddCategory = ({onAddCategory}) => {
+export const AddCategory = ({onAddCategory}) => {
     const [category,setCategory] = useState('')
     const onSetCategory = (event) => {
         setCategory(event.target.value)
@@ -13,4 +13,3 @@ const AddCategory = ({onAddCategory}) => {
     )
 }
 
-export default AddCategory
